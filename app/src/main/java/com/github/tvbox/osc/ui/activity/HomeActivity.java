@@ -140,7 +140,7 @@ public class HomeActivity extends BaseActivity {
                     textView.getPaint().setFakeBoldText(true);
                     textView.setTextColor(HomeActivity.this.getResources().getColor(R.color.color_FFFFFF));
                     textView.invalidate();
-                    if (!sortAdapter.getItem(position).filters.isEmpty())
+                    if (null!=sortAdapter.getItem(position).filters && !sortAdapter.getItem(position).filters.isEmpty())
                         view.findViewById(R.id.tvFilter).setVisibility(View.VISIBLE);
                     HomeActivity.this.sortFocusView = view;
                     HomeActivity.this.sortFocused = position;
